@@ -37,7 +37,6 @@ def loop_and_detect(cam, trt_yolo, conf_th, vis):
             full_scrn = not full_scrn
             set_display(WINDOW_NAME, full_scrn)
         cu_prof_stop() #for nvprof stop profiling
-
 ```
 
 [start profiling function 加於while loop前](https://github.com/F64081169/Nvprof_Jetson_Nano_Example/blob/cd8ce34749ad0286dc5fc76d386ff034f1627f03/trt_yolo.py#L65)
