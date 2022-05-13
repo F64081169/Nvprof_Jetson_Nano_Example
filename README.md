@@ -1,5 +1,9 @@
 # Nvprof_Jetson_Nano_Example
 
+### 使用TRTEXEC產生PROFILING結果
+`https://github.com/F64081169/Nvprof_Jetson_Nano_Example/tree/main/yolov4-tiny-profilingResult`
+- 產生資訊放於yolov4-tiny-profilingResult
+
 ### 新增cu_prof_start() and cu_prof_stop() in nvprof.py. 
 
 ```
