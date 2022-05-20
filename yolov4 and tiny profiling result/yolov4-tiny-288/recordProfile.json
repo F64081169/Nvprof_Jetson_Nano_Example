@@ -1,0 +1,56 @@
+[
+  { "count" : 230 }
+, { "name" : "001_convolutional + 001_convolutional_bn", "timeMs" : 152.724, "averageMs" : 0.664018, "percentage" : 4.96547 }
+, { "name" : "PWN(001_convolutional_lrelu)", "timeMs" : 63.8488, "averageMs" : 0.277603, "percentage" : 2.07589 }
+, { "name" : "002_convolutional + 002_convolutional_bn", "timeMs" : 249.166, "averageMs" : 1.08333, "percentage" : 8.10103 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to PWN(002_convolutional_lrelu)", "timeMs" : 62.9019, "averageMs" : 0.273487, "percentage" : 2.04511 }
+, { "name" : "PWN(002_convolutional_lrelu)", "timeMs" : 22.7003, "averageMs" : 0.0986968, "percentage" : 0.738046 }
+, { "name" : "003_convolutional + 003_convolutional_bn", "timeMs" : 192.298, "averageMs" : 0.836079, "percentage" : 6.25212 }
+, { "name" : "PWN(003_convolutional_lrelu)", "timeMs" : 22.6832, "averageMs" : 0.0986225, "percentage" : 0.73749 }
+, { "name" : "005_convolutional + 005_convolutional_bn", "timeMs" : 62.4733, "averageMs" : 0.271623, "percentage" : 2.03117 }
+, { "name" : "PWN(005_convolutional_lrelu)", "timeMs" : 26.4363, "averageMs" : 0.11494, "percentage" : 0.859514 }
+, { "name" : "006_convolutional + 006_convolutional_bn", "timeMs" : 62.3485, "averageMs" : 0.27108, "percentage" : 2.02711 }
+, { "name" : "PWN(006_convolutional_lrelu)", "timeMs" : 26.1272, "averageMs" : 0.113596, "percentage" : 0.849464 }
+, { "name" : "008_convolutional + 008_convolutional_bn", "timeMs" : 48.137, "averageMs" : 0.209291, "percentage" : 1.56506 }
+, { "name" : "PWN(008_convolutional_lrelu)", "timeMs" : 26.6942, "averageMs" : 0.116062, "percentage" : 0.867899 }
+, { "name" : "003_convolutional_lrelu copy", "timeMs" : 20.2089, "averageMs" : 0.0878649, "percentage" : 0.657045 }
+, { "name" : "010_maxpool", "timeMs" : 38.5449, "averageMs" : 0.167587, "percentage" : 1.2532 }
+, { "name" : "011_convolutional + 011_convolutional_bn", "timeMs" : 236.845, "averageMs" : 1.02976, "percentage" : 7.70046 }
+, { "name" : "PWN(011_convolutional_lrelu)", "timeMs" : 12.3366, "averageMs" : 0.0536374, "percentage" : 0.401096 }
+, { "name" : "013_convolutional + 013_convolutional_bn", "timeMs" : 63.3409, "averageMs" : 0.275395, "percentage" : 2.05938 }
+, { "name" : "PWN(013_convolutional_lrelu)", "timeMs" : 7.92017, "averageMs" : 0.0344355, "percentage" : 0.257505 }
+, { "name" : "014_convolutional + 014_convolutional_bn", "timeMs" : 63.1404, "averageMs" : 0.274523, "percentage" : 2.05286 }
+, { "name" : "PWN(014_convolutional_lrelu)", "timeMs" : 7.57681, "averageMs" : 0.0329427, "percentage" : 0.246342 }
+, { "name" : "016_convolutional + 016_convolutional_bn", "timeMs" : 39.9199, "averageMs" : 0.173565, "percentage" : 1.2979 }
+, { "name" : "PWN(016_convolutional_lrelu)", "timeMs" : 14.0774, "averageMs" : 0.0612059, "percentage" : 0.457692 }
+, { "name" : "011_convolutional_lrelu copy", "timeMs" : 10.3023, "averageMs" : 0.0447925, "percentage" : 0.334954 }
+, { "name" : "018_maxpool", "timeMs" : 20.3593, "averageMs" : 0.0885186, "percentage" : 0.661934 }
+, { "name" : "019_convolutional + 019_convolutional_bn", "timeMs" : 265.703, "averageMs" : 1.15523, "percentage" : 8.63869 }
+, { "name" : "PWN(019_convolutional_lrelu)", "timeMs" : 6.88359, "averageMs" : 0.0299287, "percentage" : 0.223804 }
+, { "name" : "021_convolutional + 021_convolutional_bn", "timeMs" : 71.4432, "averageMs" : 0.310623, "percentage" : 2.32281 }
+, { "name" : "PWN(021_convolutional_lrelu)", "timeMs" : 5.23167, "averageMs" : 0.0227464, "percentage" : 0.170095 }
+, { "name" : "022_convolutional + 022_convolutional_bn", "timeMs" : 71.8123, "averageMs" : 0.312227, "percentage" : 2.33481 }
+, { "name" : "PWN(022_convolutional_lrelu)", "timeMs" : 5.09115, "averageMs" : 0.0221354, "percentage" : 0.165527 }
+, { "name" : "024_convolutional + 024_convolutional_bn", "timeMs" : 38.4348, "averageMs" : 0.167108, "percentage" : 1.24962 }
+, { "name" : "PWN(024_convolutional_lrelu)", "timeMs" : 8.2996, "averageMs" : 0.0360852, "percentage" : 0.269842 }
+, { "name" : "019_convolutional_lrelu copy", "timeMs" : 5.90348, "averageMs" : 0.0256673, "percentage" : 0.191938 }
+, { "name" : "024_convolutional_lrelu copy", "timeMs" : 5.53312, "averageMs" : 0.0240571, "percentage" : 0.179896 }
+, { "name" : "026_maxpool", "timeMs" : 12.5827, "averageMs" : 0.0547074, "percentage" : 0.409097 }
+, { "name" : "027_convolutional + 027_convolutional_bn", "timeMs" : 309.639, "averageMs" : 1.34626, "percentage" : 10.0672 }
+, { "name" : "PWN(027_convolutional_lrelu)", "timeMs" : 3.99765, "averageMs" : 0.0173811, "percentage" : 0.129974 }
+, { "name" : "028_convolutional + 028_convolutional_bn", "timeMs" : 25.2443, "averageMs" : 0.109758, "percentage" : 0.820759 }
+, { "name" : "PWN(028_convolutional_lrelu)", "timeMs" : 2.57703, "averageMs" : 0.0112045, "percentage" : 0.083786 }
+, { "name" : "029_convolutional + 029_convolutional_bn", "timeMs" : 169.564, "averageMs" : 0.737237, "percentage" : 5.51299 }
+, { "name" : "PWN(029_convolutional_lrelu)", "timeMs" : 4.01764, "averageMs" : 0.017468, "percentage" : 0.130624 }
+, { "name" : "030_convolutional", "timeMs" : 24.4077, "averageMs" : 0.106121, "percentage" : 0.793559 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to 030_convolutional", "timeMs" : 4.43733, "averageMs" : 0.0192928, "percentage" : 0.144269 }
+, { "name" : "033_convolutional + 033_convolutional_bn", "timeMs" : 11.8629, "averageMs" : 0.0515777, "percentage" : 0.385693 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to PWN(033_convolutional_lrelu)", "timeMs" : 2.54996, "averageMs" : 0.0110868, "percentage" : 0.0829058 }
+, { "name" : "PWN(033_convolutional_lrelu)", "timeMs" : 1.58469, "averageMs" : 0.00688995, "percentage" : 0.0515224 }
+, { "name" : "034_upsample", "timeMs" : 9.18781, "averageMs" : 0.039947, "percentage" : 0.29872 }
+, { "name" : "034_upsample copy", "timeMs" : 8.72854, "averageMs" : 0.0379502, "percentage" : 0.283788 }
+, { "name" : "036_convolutional + 036_convolutional_bn", "timeMs" : 390.654, "averageMs" : 1.6985, "percentage" : 12.7012 }
+, { "name" : "PWN(036_convolutional_lrelu)", "timeMs" : 6.62316, "averageMs" : 0.0287964, "percentage" : 0.215337 }
+, { "name" : "037_convolutional", "timeMs" : 36.4202, "averageMs" : 0.158349, "percentage" : 1.18412 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to 037_convolutional", "timeMs" : 14.2015, "averageMs" : 0.0617457, "percentage" : 0.461728 }
+]

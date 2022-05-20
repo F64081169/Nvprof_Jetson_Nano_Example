@@ -1,0 +1,232 @@
+[
+  { "count" : 30 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to 001_convolutional + 001_convolutional_bn", "timeMs" : 16.2305, "averageMs" : 0.541017, "percentage" : 0.469935 }
+, { "name" : "001_convolutional + 001_convolutional_bn", "timeMs" : 64.7148, "averageMs" : 2.15716, "percentage" : 1.87374 }
+, { "name" : "PWN(PWN(PWN(001_convolutional_softplus), PWN(001_convolutional_tanh)), 001_convolutional_mish)", "timeMs" : 65.5282, "averageMs" : 2.18427, "percentage" : 1.89729 }
+, { "name" : "002_convolutional + 002_convolutional_bn", "timeMs" : 68.677, "averageMs" : 2.28923, "percentage" : 1.98846 }
+, { "name" : "PWN(PWN(PWN(002_convolutional_softplus), PWN(002_convolutional_tanh)), 002_convolutional_mish)", "timeMs" : 25.8788, "averageMs" : 0.862627, "percentage" : 0.749289 }
+, { "name" : "003_convolutional + 003_convolutional_bn || 005_convolutional + 005_convolutional_bn", "timeMs" : 45.818, "averageMs" : 1.52727, "percentage" : 1.32661 }
+, { "name" : "PWN(PWN(PWN(003_convolutional_softplus), PWN(003_convolutional_tanh)), 003_convolutional_mish)", "timeMs" : 27.2778, "averageMs" : 0.90926, "percentage" : 0.789796 }
+, { "name" : "PWN(PWN(PWN(005_convolutional_softplus), PWN(005_convolutional_tanh)), 005_convolutional_mish)", "timeMs" : 27.5817, "averageMs" : 0.919389, "percentage" : 0.798593 }
+, { "name" : "006_convolutional + 006_convolutional_bn", "timeMs" : 15.5753, "averageMs" : 0.519175, "percentage" : 0.450963 }
+, { "name" : "PWN(PWN(PWN(006_convolutional_softplus), PWN(006_convolutional_tanh)), 006_convolutional_mish)", "timeMs" : 13.0399, "averageMs" : 0.434663, "percentage" : 0.377554 }
+, { "name" : "007_convolutional + 007_convolutional_bn", "timeMs" : 60.7676, "averageMs" : 2.02559, "percentage" : 1.75945 }
+, { "name" : "PWN(PWN(PWN(PWN(007_convolutional_softplus), PWN(007_convolutional_tanh)), 007_convolutional_mish), 008_shortcut)", "timeMs" : 37.4796, "averageMs" : 1.24932, "percentage" : 1.08518 }
+, { "name" : "009_convolutional + 009_convolutional_bn", "timeMs" : 23.3173, "averageMs" : 0.777245, "percentage" : 0.675125 }
+, { "name" : "PWN(PWN(PWN(009_convolutional_softplus), PWN(009_convolutional_tanh)), 009_convolutional_mish)", "timeMs" : 27.8909, "averageMs" : 0.929698, "percentage" : 0.807548 }
+, { "name" : "011_convolutional + 011_convolutional_bn", "timeMs" : 35.9492, "averageMs" : 1.19831, "percentage" : 1.04087 }
+, { "name" : "PWN(PWN(PWN(011_convolutional_softplus), PWN(011_convolutional_tanh)), 011_convolutional_mish)", "timeMs" : 25.9509, "averageMs" : 0.865029, "percentage" : 0.751376 }
+, { "name" : "012_convolutional + 012_convolutional_bn", "timeMs" : 64.7499, "averageMs" : 2.15833, "percentage" : 1.87475 }
+, { "name" : "PWN(PWN(PWN(012_convolutional_softplus), PWN(012_convolutional_tanh)), 012_convolutional_mish)", "timeMs" : 13.0139, "averageMs" : 0.433797, "percentage" : 0.376802 }
+, { "name" : "013_convolutional + 013_convolutional_bn || 015_convolutional + 015_convolutional_bn", "timeMs" : 18.6539, "averageMs" : 0.621797, "percentage" : 0.540101 }
+, { "name" : "PWN(PWN(PWN(013_convolutional_softplus), PWN(013_convolutional_tanh)), 013_convolutional_mish)", "timeMs" : 7.03958, "averageMs" : 0.234653, "percentage" : 0.203822 }
+, { "name" : "PWN(PWN(PWN(015_convolutional_softplus), PWN(015_convolutional_tanh)), 015_convolutional_mish)", "timeMs" : 7.01688, "averageMs" : 0.233896, "percentage" : 0.203165 }
+, { "name" : "016_convolutional + 016_convolutional_bn", "timeMs" : 6.11287, "averageMs" : 0.203762, "percentage" : 0.176991 }
+, { "name" : "PWN(PWN(PWN(016_convolutional_softplus), PWN(016_convolutional_tanh)), 016_convolutional_mish)", "timeMs" : 6.64015, "averageMs" : 0.221338, "percentage" : 0.192258 }
+, { "name" : "017_convolutional + 017_convolutional_bn", "timeMs" : 26.5234, "averageMs" : 0.884113, "percentage" : 0.767952 }
+, { "name" : "PWN(PWN(PWN(PWN(017_convolutional_softplus), PWN(017_convolutional_tanh)), 017_convolutional_mish), 018_shortcut)", "timeMs" : 8.12708, "averageMs" : 0.270903, "percentage" : 0.23531 }
+, { "name" : "019_convolutional + 019_convolutional_bn", "timeMs" : 6.45443, "averageMs" : 0.215148, "percentage" : 0.18688 }
+, { "name" : "PWN(PWN(PWN(019_convolutional_softplus), PWN(019_convolutional_tanh)), 019_convolutional_mish)", "timeMs" : 6.66615, "averageMs" : 0.222205, "percentage" : 0.19301 }
+, { "name" : "020_convolutional + 020_convolutional_bn", "timeMs" : 26.378, "averageMs" : 0.879266, "percentage" : 0.763742 }
+, { "name" : "PWN(PWN(PWN(PWN(020_convolutional_softplus), PWN(020_convolutional_tanh)), 020_convolutional_mish), 021_shortcut)", "timeMs" : 8.09323, "averageMs" : 0.269774, "percentage" : 0.23433 }
+, { "name" : "022_convolutional + 022_convolutional_bn", "timeMs" : 6.44042, "averageMs" : 0.214681, "percentage" : 0.186474 }
+, { "name" : "PWN(PWN(PWN(022_convolutional_softplus), PWN(022_convolutional_tanh)), 022_convolutional_mish)", "timeMs" : 7.04578, "averageMs" : 0.234859, "percentage" : 0.204002 }
+, { "name" : "024_convolutional + 024_convolutional_bn", "timeMs" : 18.3571, "averageMs" : 0.611905, "percentage" : 0.531509 }
+, { "name" : "PWN(PWN(PWN(024_convolutional_softplus), PWN(024_convolutional_tanh)), 024_convolutional_mish)", "timeMs" : 13.0128, "averageMs" : 0.43376, "percentage" : 0.37677 }
+, { "name" : "025_convolutional + 025_convolutional_bn", "timeMs" : 66.8597, "averageMs" : 2.22866, "percentage" : 1.93584 }
+, { "name" : "PWN(PWN(PWN(025_convolutional_softplus), PWN(025_convolutional_tanh)), 025_convolutional_mish)", "timeMs" : 6.58865, "averageMs" : 0.219622, "percentage" : 0.190766 }
+, { "name" : "026_convolutional + 026_convolutional_bn || 028_convolutional + 028_convolutional_bn", "timeMs" : 17.2273, "averageMs" : 0.574243, "percentage" : 0.498795 }
+, { "name" : "PWN(PWN(PWN(026_convolutional_softplus), PWN(026_convolutional_tanh)), 026_convolutional_mish)", "timeMs" : 3.57818, "averageMs" : 0.119273, "percentage" : 0.103602 }
+, { "name" : "PWN(PWN(PWN(028_convolutional_softplus), PWN(028_convolutional_tanh)), 028_convolutional_mish)", "timeMs" : 3.45771, "averageMs" : 0.115257, "percentage" : 0.100114 }
+, { "name" : "029_convolutional + 029_convolutional_bn", "timeMs" : 5.45687, "averageMs" : 0.181896, "percentage" : 0.157997 }
+, { "name" : "PWN(PWN(PWN(029_convolutional_softplus), PWN(029_convolutional_tanh)), 029_convolutional_mish)", "timeMs" : 3.39386, "averageMs" : 0.113129, "percentage" : 0.098265 }
+, { "name" : "030_convolutional + 030_convolutional_bn", "timeMs" : 31.7446, "averageMs" : 1.05815, "percentage" : 0.919126 }
+, { "name" : "PWN(PWN(PWN(PWN(030_convolutional_softplus), PWN(030_convolutional_tanh)), 030_convolutional_mish), 031_shortcut)", "timeMs" : 4.08687, "averageMs" : 0.136229, "percentage" : 0.11833 }
+, { "name" : "032_convolutional + 032_convolutional_bn", "timeMs" : 5.3951, "averageMs" : 0.179837, "percentage" : 0.156209 }
+, { "name" : "PWN(PWN(PWN(032_convolutional_softplus), PWN(032_convolutional_tanh)), 032_convolutional_mish)", "timeMs" : 3.36516, "averageMs" : 0.112172, "percentage" : 0.0974341 }
+, { "name" : "033_convolutional + 033_convolutional_bn", "timeMs" : 30.9891, "averageMs" : 1.03297, "percentage" : 0.897252 }
+, { "name" : "PWN(PWN(PWN(PWN(033_convolutional_softplus), PWN(033_convolutional_tanh)), 033_convolutional_mish), 034_shortcut)", "timeMs" : 3.96787, "averageMs" : 0.132262, "percentage" : 0.114885 }
+, { "name" : "035_convolutional + 035_convolutional_bn", "timeMs" : 5.24515, "averageMs" : 0.174838, "percentage" : 0.151867 }
+, { "name" : "PWN(PWN(PWN(035_convolutional_softplus), PWN(035_convolutional_tanh)), 035_convolutional_mish)", "timeMs" : 3.28979, "averageMs" : 0.10966, "percentage" : 0.095252 }
+, { "name" : "036_convolutional + 036_convolutional_bn", "timeMs" : 30.7717, "averageMs" : 1.02572, "percentage" : 0.890958 }
+, { "name" : "PWN(PWN(PWN(PWN(036_convolutional_softplus), PWN(036_convolutional_tanh)), 036_convolutional_mish), 037_shortcut)", "timeMs" : 4.03938, "averageMs" : 0.134646, "percentage" : 0.116955 }
+, { "name" : "038_convolutional + 038_convolutional_bn", "timeMs" : 5.24177, "averageMs" : 0.174726, "percentage" : 0.151769 }
+, { "name" : "PWN(PWN(PWN(038_convolutional_softplus), PWN(038_convolutional_tanh)), 038_convolutional_mish)", "timeMs" : 3.3102, "averageMs" : 0.11034, "percentage" : 0.095843 }
+, { "name" : "039_convolutional + 039_convolutional_bn", "timeMs" : 30.9397, "averageMs" : 1.03132, "percentage" : 0.895821 }
+, { "name" : "PWN(PWN(PWN(PWN(039_convolutional_softplus), PWN(039_convolutional_tanh)), 039_convolutional_mish), 040_shortcut)", "timeMs" : 4.03849, "averageMs" : 0.134616, "percentage" : 0.116929 }
+, { "name" : "041_convolutional + 041_convolutional_bn", "timeMs" : 5.23359, "averageMs" : 0.174453, "percentage" : 0.151532 }
+, { "name" : "PWN(PWN(PWN(041_convolutional_softplus), PWN(041_convolutional_tanh)), 041_convolutional_mish)", "timeMs" : 3.26729, "averageMs" : 0.10891, "percentage" : 0.0946005 }
+, { "name" : "042_convolutional + 042_convolutional_bn", "timeMs" : 30.8616, "averageMs" : 1.02872, "percentage" : 0.89356 }
+, { "name" : "PWN(PWN(PWN(PWN(042_convolutional_softplus), PWN(042_convolutional_tanh)), 042_convolutional_mish), 043_shortcut)", "timeMs" : 4.04808, "averageMs" : 0.134936, "percentage" : 0.117207 }
+, { "name" : "044_convolutional + 044_convolutional_bn", "timeMs" : 5.23578, "averageMs" : 0.174526, "percentage" : 0.151596 }
+, { "name" : "PWN(PWN(PWN(044_convolutional_softplus), PWN(044_convolutional_tanh)), 044_convolutional_mish)", "timeMs" : 3.27193, "averageMs" : 0.109064, "percentage" : 0.0947348 }
+, { "name" : "045_convolutional + 045_convolutional_bn", "timeMs" : 30.9055, "averageMs" : 1.03018, "percentage" : 0.89483 }
+, { "name" : "PWN(PWN(PWN(PWN(045_convolutional_softplus), PWN(045_convolutional_tanh)), 045_convolutional_mish), 046_shortcut)", "timeMs" : 4.06365, "averageMs" : 0.135455, "percentage" : 0.117658 }
+, { "name" : "047_convolutional + 047_convolutional_bn", "timeMs" : 5.25187, "averageMs" : 0.175062, "percentage" : 0.152062 }
+, { "name" : "PWN(PWN(PWN(047_convolutional_softplus), PWN(047_convolutional_tanh)), 047_convolutional_mish)", "timeMs" : 3.24396, "averageMs" : 0.108132, "percentage" : 0.093925 }
+, { "name" : "048_convolutional + 048_convolutional_bn", "timeMs" : 30.7602, "averageMs" : 1.02534, "percentage" : 0.890624 }
+, { "name" : "PWN(PWN(PWN(PWN(048_convolutional_softplus), PWN(048_convolutional_tanh)), 048_convolutional_mish), 049_shortcut)", "timeMs" : 4.05235, "averageMs" : 0.135078, "percentage" : 0.117331 }
+, { "name" : "050_convolutional + 050_convolutional_bn", "timeMs" : 5.25437, "averageMs" : 0.175146, "percentage" : 0.152134 }
+, { "name" : "PWN(PWN(PWN(050_convolutional_softplus), PWN(050_convolutional_tanh)), 050_convolutional_mish)", "timeMs" : 3.22047, "averageMs" : 0.107349, "percentage" : 0.0932448 }
+, { "name" : "051_convolutional + 051_convolutional_bn", "timeMs" : 30.9156, "averageMs" : 1.03052, "percentage" : 0.895123 }
+, { "name" : "PWN(PWN(PWN(PWN(051_convolutional_softplus), PWN(051_convolutional_tanh)), 051_convolutional_mish), 052_shortcut)", "timeMs" : 4.0437, "averageMs" : 0.13479, "percentage" : 0.11708 }
+, { "name" : "053_convolutional + 053_convolutional_bn", "timeMs" : 5.20437, "averageMs" : 0.173479, "percentage" : 0.150686 }
+, { "name" : "PWN(PWN(PWN(053_convolutional_softplus), PWN(053_convolutional_tanh)), 053_convolutional_mish)", "timeMs" : 3.50516, "averageMs" : 0.116839, "percentage" : 0.101488 }
+, { "name" : "055_convolutional + 055_convolutional_bn", "timeMs" : 16.7447, "averageMs" : 0.558156, "percentage" : 0.484822 }
+, { "name" : "PWN(PWN(PWN(055_convolutional_softplus), PWN(055_convolutional_tanh)), 055_convolutional_mish)", "timeMs" : 6.04188, "averageMs" : 0.201396, "percentage" : 0.174935 }
+, { "name" : "056_convolutional + 056_convolutional_bn", "timeMs" : 69.8705, "averageMs" : 2.32902, "percentage" : 2.02302 }
+, { "name" : "PWN(PWN(PWN(056_convolutional_softplus), PWN(056_convolutional_tanh)), 056_convolutional_mish)", "timeMs" : 3.17792, "averageMs" : 0.105931, "percentage" : 0.0920127 }
+, { "name" : "057_convolutional + 057_convolutional_bn || 059_convolutional + 059_convolutional_bn", "timeMs" : 16.8083, "averageMs" : 0.560276, "percentage" : 0.486663 }
+, { "name" : "PWN(PWN(PWN(057_convolutional_softplus), PWN(057_convolutional_tanh)), 057_convolutional_mish)", "timeMs" : 1.80312, "averageMs" : 0.0601041, "percentage" : 0.0522072 }
+, { "name" : "PWN(PWN(PWN(059_convolutional_softplus), PWN(059_convolutional_tanh)), 059_convolutional_mish)", "timeMs" : 1.77896, "averageMs" : 0.0592987, "percentage" : 0.0515077 }
+, { "name" : "060_convolutional + 060_convolutional_bn", "timeMs" : 4.63396, "averageMs" : 0.154465, "percentage" : 0.134171 }
+, { "name" : "PWN(PWN(PWN(060_convolutional_softplus), PWN(060_convolutional_tanh)), 060_convolutional_mish)", "timeMs" : 1.7037, "averageMs" : 0.0567899, "percentage" : 0.0493285 }
+, { "name" : "061_convolutional + 061_convolutional_bn", "timeMs" : 34.8898, "averageMs" : 1.16299, "percentage" : 1.01019 }
+, { "name" : "PWN(PWN(PWN(PWN(061_convolutional_softplus), PWN(061_convolutional_tanh)), 061_convolutional_mish), 062_shortcut)", "timeMs" : 2.03407, "averageMs" : 0.0678022, "percentage" : 0.0588939 }
+, { "name" : "063_convolutional + 063_convolutional_bn", "timeMs" : 4.95265, "averageMs" : 0.165088, "percentage" : 0.143398 }
+, { "name" : "PWN(PWN(PWN(063_convolutional_softplus), PWN(063_convolutional_tanh)), 063_convolutional_mish)", "timeMs" : 1.69953, "averageMs" : 0.0566511, "percentage" : 0.0492079 }
+, { "name" : "064_convolutional + 064_convolutional_bn", "timeMs" : 34.9239, "averageMs" : 1.16413, "percentage" : 1.01118 }
+, { "name" : "PWN(PWN(PWN(PWN(064_convolutional_softplus), PWN(064_convolutional_tanh)), 064_convolutional_mish), 065_shortcut)", "timeMs" : 2.08, "averageMs" : 0.0693332, "percentage" : 0.0602238 }
+, { "name" : "066_convolutional + 066_convolutional_bn", "timeMs" : 4.96334, "averageMs" : 0.165445, "percentage" : 0.143707 }
+, { "name" : "PWN(PWN(PWN(066_convolutional_softplus), PWN(066_convolutional_tanh)), 066_convolutional_mish)", "timeMs" : 1.67661, "averageMs" : 0.0558871, "percentage" : 0.0485443 }
+, { "name" : "067_convolutional + 067_convolutional_bn", "timeMs" : 34.8988, "averageMs" : 1.16329, "percentage" : 1.01045 }
+, { "name" : "PWN(PWN(PWN(PWN(067_convolutional_softplus), PWN(067_convolutional_tanh)), 067_convolutional_mish), 068_shortcut)", "timeMs" : 2.08765, "averageMs" : 0.0695885, "percentage" : 0.0604455 }
+, { "name" : "069_convolutional + 069_convolutional_bn", "timeMs" : 4.94833, "averageMs" : 0.164944, "percentage" : 0.143273 }
+, { "name" : "PWN(PWN(PWN(069_convolutional_softplus), PWN(069_convolutional_tanh)), 069_convolutional_mish)", "timeMs" : 1.66448, "averageMs" : 0.0554827, "percentage" : 0.048193 }
+, { "name" : "070_convolutional + 070_convolutional_bn", "timeMs" : 35.0228, "averageMs" : 1.16743, "percentage" : 1.01404 }
+, { "name" : "PWN(PWN(PWN(PWN(070_convolutional_softplus), PWN(070_convolutional_tanh)), 070_convolutional_mish), 071_shortcut)", "timeMs" : 2.12287, "averageMs" : 0.0707622, "percentage" : 0.061465 }
+, { "name" : "072_convolutional + 072_convolutional_bn", "timeMs" : 4.9437, "averageMs" : 0.16479, "percentage" : 0.143139 }
+, { "name" : "PWN(PWN(PWN(072_convolutional_softplus), PWN(072_convolutional_tanh)), 072_convolutional_mish)", "timeMs" : 1.67224, "averageMs" : 0.0557414, "percentage" : 0.0484178 }
+, { "name" : "073_convolutional + 073_convolutional_bn", "timeMs" : 34.8927, "averageMs" : 1.16309, "percentage" : 1.01027 }
+, { "name" : "PWN(PWN(PWN(PWN(073_convolutional_softplus), PWN(073_convolutional_tanh)), 073_convolutional_mish), 074_shortcut)", "timeMs" : 2.10823, "averageMs" : 0.0702742, "percentage" : 0.0610411 }
+, { "name" : "075_convolutional + 075_convolutional_bn", "timeMs" : 4.93135, "averageMs" : 0.164378, "percentage" : 0.142781 }
+, { "name" : "PWN(PWN(PWN(075_convolutional_softplus), PWN(075_convolutional_tanh)), 075_convolutional_mish)", "timeMs" : 1.66964, "averageMs" : 0.0556547, "percentage" : 0.0483424 }
+, { "name" : "076_convolutional + 076_convolutional_bn", "timeMs" : 34.9517, "averageMs" : 1.16506, "percentage" : 1.01198 }
+, { "name" : "PWN(PWN(PWN(PWN(076_convolutional_softplus), PWN(076_convolutional_tanh)), 076_convolutional_mish), 077_shortcut)", "timeMs" : 2.12812, "averageMs" : 0.0709375, "percentage" : 0.0616172 }
+, { "name" : "078_convolutional + 078_convolutional_bn", "timeMs" : 4.93093, "averageMs" : 0.164364, "percentage" : 0.142769 }
+, { "name" : "PWN(PWN(PWN(078_convolutional_softplus), PWN(078_convolutional_tanh)), 078_convolutional_mish)", "timeMs" : 1.69365, "averageMs" : 0.0564549, "percentage" : 0.0490375 }
+, { "name" : "079_convolutional + 079_convolutional_bn", "timeMs" : 34.9501, "averageMs" : 1.165, "percentage" : 1.01194 }
+, { "name" : "PWN(PWN(PWN(PWN(079_convolutional_softplus), PWN(079_convolutional_tanh)), 079_convolutional_mish), 080_shortcut)", "timeMs" : 2.12188, "averageMs" : 0.0707292, "percentage" : 0.0614363 }
+, { "name" : "081_convolutional + 081_convolutional_bn", "timeMs" : 4.93312, "averageMs" : 0.164437, "percentage" : 0.142833 }
+, { "name" : "PWN(PWN(PWN(081_convolutional_softplus), PWN(081_convolutional_tanh)), 081_convolutional_mish)", "timeMs" : 1.68839, "averageMs" : 0.0562795, "percentage" : 0.0488851 }
+, { "name" : "082_convolutional + 082_convolutional_bn", "timeMs" : 34.9233, "averageMs" : 1.16411, "percentage" : 1.01116 }
+, { "name" : "PWN(PWN(PWN(PWN(082_convolutional_softplus), PWN(082_convolutional_tanh)), 082_convolutional_mish), 083_shortcut)", "timeMs" : 2.13406, "averageMs" : 0.0711355, "percentage" : 0.0617892 }
+, { "name" : "084_convolutional + 084_convolutional_bn", "timeMs" : 4.93057, "averageMs" : 0.164352, "percentage" : 0.142759 }
+, { "name" : "PWN(PWN(PWN(084_convolutional_softplus), PWN(084_convolutional_tanh)), 084_convolutional_mish)", "timeMs" : 1.83797, "averageMs" : 0.0612656, "percentage" : 0.0532162 }
+, { "name" : "086_convolutional + 086_convolutional_bn", "timeMs" : 16.4701, "averageMs" : 0.549003, "percentage" : 0.476872 }
+, { "name" : "PWN(PWN(PWN(086_convolutional_softplus), PWN(086_convolutional_tanh)), 086_convolutional_mish)", "timeMs" : 3.02276, "averageMs" : 0.100759, "percentage" : 0.0875202 }
+, { "name" : "087_convolutional + 087_convolutional_bn", "timeMs" : 92.287, "averageMs" : 3.07623, "percentage" : 2.67206 }
+, { "name" : "PWN(PWN(PWN(087_convolutional_softplus), PWN(087_convolutional_tanh)), 087_convolutional_mish)", "timeMs" : 1.61188, "averageMs" : 0.0537292, "percentage" : 0.0466699 }
+, { "name" : "088_convolutional + 088_convolutional_bn || 090_convolutional + 090_convolutional_bn", "timeMs" : 21.0764, "averageMs" : 0.702547, "percentage" : 0.610242 }
+, { "name" : "PWN(PWN(PWN(088_convolutional_softplus), PWN(088_convolutional_tanh)), 088_convolutional_mish)", "timeMs" : 1.07089, "averageMs" : 0.0356962, "percentage" : 0.0310062 }
+, { "name" : "PWN(PWN(PWN(090_convolutional_softplus), PWN(090_convolutional_tanh)), 090_convolutional_mish)", "timeMs" : 1.08844, "averageMs" : 0.0362812, "percentage" : 0.0315143 }
+, { "name" : "091_convolutional + 091_convolutional_bn", "timeMs" : 5.72906, "averageMs" : 0.190969, "percentage" : 0.165878 }
+, { "name" : "PWN(PWN(PWN(091_convolutional_softplus), PWN(091_convolutional_tanh)), 091_convolutional_mish)", "timeMs" : 1.03042, "averageMs" : 0.0343473, "percentage" : 0.0298346 }
+, { "name" : "092_convolutional + 092_convolutional_bn", "timeMs" : 41.0849, "averageMs" : 1.3695, "percentage" : 1.18956 }
+, { "name" : "PWN(PWN(PWN(PWN(092_convolutional_softplus), PWN(092_convolutional_tanh)), 092_convolutional_mish), 093_shortcut)", "timeMs" : 1.15406, "averageMs" : 0.0384687, "percentage" : 0.0334144 }
+, { "name" : "094_convolutional + 094_convolutional_bn", "timeMs" : 5.99901, "averageMs" : 0.199967, "percentage" : 0.173694 }
+, { "name" : "PWN(PWN(PWN(094_convolutional_softplus), PWN(094_convolutional_tanh)), 094_convolutional_mish)", "timeMs" : 1.01891, "averageMs" : 0.0339636, "percentage" : 0.0295012 }
+, { "name" : "095_convolutional + 095_convolutional_bn", "timeMs" : 40.8689, "averageMs" : 1.3623, "percentage" : 1.18331 }
+, { "name" : "PWN(PWN(PWN(PWN(095_convolutional_softplus), PWN(095_convolutional_tanh)), 095_convolutional_mish), 096_shortcut)", "timeMs" : 1.15349, "averageMs" : 0.0384497, "percentage" : 0.0333979 }
+, { "name" : "097_convolutional + 097_convolutional_bn", "timeMs" : 6.00838, "averageMs" : 0.200279, "percentage" : 0.173965 }
+, { "name" : "PWN(PWN(PWN(097_convolutional_softplus), PWN(097_convolutional_tanh)), 097_convolutional_mish)", "timeMs" : 0.996878, "averageMs" : 0.0332293, "percentage" : 0.0288634 }
+, { "name" : "098_convolutional + 098_convolutional_bn", "timeMs" : 40.7677, "averageMs" : 1.35892, "percentage" : 1.18038 }
+, { "name" : "PWN(PWN(PWN(PWN(098_convolutional_softplus), PWN(098_convolutional_tanh)), 098_convolutional_mish), 099_shortcut)", "timeMs" : 1.17432, "averageMs" : 0.0391441, "percentage" : 0.0340011 }
+, { "name" : "100_convolutional + 100_convolutional_bn", "timeMs" : 5.97573, "averageMs" : 0.199191, "percentage" : 0.17302 }
+, { "name" : "PWN(PWN(PWN(100_convolutional_softplus), PWN(100_convolutional_tanh)), 100_convolutional_mish)", "timeMs" : 1.02875, "averageMs" : 0.0342916, "percentage" : 0.0297861 }
+, { "name" : "101_convolutional + 101_convolutional_bn", "timeMs" : 40.7845, "averageMs" : 1.35948, "percentage" : 1.18087 }
+, { "name" : "PWN(PWN(PWN(PWN(101_convolutional_softplus), PWN(101_convolutional_tanh)), 101_convolutional_mish), 102_shortcut)", "timeMs" : 1.17854, "averageMs" : 0.0392847, "percentage" : 0.0341232 }
+, { "name" : "103_convolutional + 103_convolutional_bn", "timeMs" : 5.97589, "averageMs" : 0.199196, "percentage" : 0.173025 }
+, { "name" : "PWN(PWN(PWN(103_convolutional_softplus), PWN(103_convolutional_tanh)), 103_convolutional_mish)", "timeMs" : 0.959375, "averageMs" : 0.0319792, "percentage" : 0.0277775 }
+, { "name" : "105_convolutional + 105_convolutional_bn", "timeMs" : 20.7087, "averageMs" : 0.69029, "percentage" : 0.599595 }
+, { "name" : "PWN(PWN(PWN(105_convolutional_softplus), PWN(105_convolutional_tanh)), 105_convolutional_mish)", "timeMs" : 1.71526, "averageMs" : 0.0571753, "percentage" : 0.0496633 }
+, { "name" : "106_convolutional + 106_convolutional_bn", "timeMs" : 10.501, "averageMs" : 0.350035, "percentage" : 0.304045 }
+, { "name" : "PWN(106_convolutional_lrelu)", "timeMs" : 0.656669, "averageMs" : 0.021889, "percentage" : 0.0190131 }
+, { "name" : "107_convolutional + 107_convolutional_bn", "timeMs" : 91.2146, "averageMs" : 3.04049, "percentage" : 2.64101 }
+, { "name" : "PWN(107_convolutional_lrelu)", "timeMs" : 0.868487, "averageMs" : 0.0289496, "percentage" : 0.025146 }
+, { "name" : "108_convolutional + 108_convolutional_bn", "timeMs" : 10.741, "averageMs" : 0.358033, "percentage" : 0.310992 }
+, { "name" : "PWN(108_convolutional_lrelu)", "timeMs" : 0.687605, "averageMs" : 0.0229202, "percentage" : 0.0199088 }
+, { "name" : "109_maxpool", "timeMs" : 3.36688, "averageMs" : 0.112229, "percentage" : 0.0974838 }
+, { "name" : "111_maxpool", "timeMs" : 7.76745, "averageMs" : 0.258915, "percentage" : 0.224897 }
+, { "name" : "113_maxpool", "timeMs" : 12.7511, "averageMs" : 0.425038, "percentage" : 0.369194 }
+, { "name" : "113_maxpool copy", "timeMs" : 0.343179, "averageMs" : 0.0114393, "percentage" : 0.00993633 }
+, { "name" : "111_maxpool copy", "timeMs" : 0.426354, "averageMs" : 0.0142118, "percentage" : 0.0123446 }
+, { "name" : "109_maxpool copy", "timeMs" : 0.416043, "averageMs" : 0.0138681, "percentage" : 0.012046 }
+, { "name" : "108_convolutional_lrelu copy", "timeMs" : 0.417341, "averageMs" : 0.0139114, "percentage" : 0.0120836 }
+, { "name" : "115_convolutional + 115_convolutional_bn", "timeMs" : 20.3639, "averageMs" : 0.678797, "percentage" : 0.589612 }
+, { "name" : "PWN(115_convolutional_lrelu)", "timeMs" : 0.668593, "averageMs" : 0.0222864, "percentage" : 0.0193583 }
+, { "name" : "116_convolutional + 116_convolutional_bn", "timeMs" : 91.3667, "averageMs" : 3.04556, "percentage" : 2.64541 }
+, { "name" : "PWN(116_convolutional_lrelu)", "timeMs" : 0.867394, "averageMs" : 0.0289131, "percentage" : 0.0251143 }
+, { "name" : "117_convolutional + 117_convolutional_bn", "timeMs" : 10.6873, "averageMs" : 0.356245, "percentage" : 0.309439 }
+, { "name" : "PWN(117_convolutional_lrelu)", "timeMs" : 0.739011, "averageMs" : 0.0246337, "percentage" : 0.0213972 }
+, { "name" : "118_convolutional + 118_convolutional_bn", "timeMs" : 3.2087, "averageMs" : 0.106957, "percentage" : 0.092904 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to PWN(118_convolutional_lrelu)", "timeMs" : 0.562656, "averageMs" : 0.0187552, "percentage" : 0.016291 }
+, { "name" : "PWN(118_convolutional_lrelu)", "timeMs" : 0.284376, "averageMs" : 0.0094792, "percentage" : 0.00823376 }
+, { "name" : "119_upsample", "timeMs" : 2.26109, "averageMs" : 0.0753697, "percentage" : 0.0654671 }
+, { "name" : "121_convolutional + 121_convolutional_bn", "timeMs" : 8.46526, "averageMs" : 0.282175, "percentage" : 0.245101 }
+, { "name" : "PWN(121_convolutional_lrelu)", "timeMs" : 1.00568, "averageMs" : 0.0335226, "percentage" : 0.0291182 }
+, { "name" : "119_upsample copy", "timeMs" : 2.17062, "averageMs" : 0.0723541, "percentage" : 0.0628477 }
+, { "name" : "123_convolutional + 123_convolutional_bn", "timeMs" : 8.38188, "averageMs" : 0.279396, "percentage" : 0.242687 }
+, { "name" : "PWN(123_convolutional_lrelu)", "timeMs" : 0.877031, "averageMs" : 0.0292344, "percentage" : 0.0253934 }
+, { "name" : "124_convolutional + 124_convolutional_bn", "timeMs" : 70.8625, "averageMs" : 2.36208, "percentage" : 2.05174 }
+, { "name" : "PWN(124_convolutional_lrelu)", "timeMs" : 1.58115, "averageMs" : 0.0527049, "percentage" : 0.0457802 }
+, { "name" : "125_convolutional + 125_convolutional_bn", "timeMs" : 8.62928, "averageMs" : 0.287643, "percentage" : 0.24985 }
+, { "name" : "PWN(125_convolutional_lrelu)", "timeMs" : 0.88484, "averageMs" : 0.0294947, "percentage" : 0.0256195 }
+, { "name" : "126_convolutional + 126_convolutional_bn", "timeMs" : 70.3804, "averageMs" : 2.34601, "percentage" : 2.03778 }
+, { "name" : "PWN(126_convolutional_lrelu)", "timeMs" : 1.58255, "averageMs" : 0.0527517, "percentage" : 0.0458208 }
+, { "name" : "127_convolutional + 127_convolutional_bn", "timeMs" : 8.61266, "averageMs" : 0.287089, "percentage" : 0.249369 }
+, { "name" : "PWN(127_convolutional_lrelu)", "timeMs" : 0.981148, "averageMs" : 0.0327049, "percentage" : 0.0284079 }
+, { "name" : "128_convolutional + 128_convolutional_bn", "timeMs" : 2.46485, "averageMs" : 0.0821615, "percentage" : 0.0713666 }
+, { "name" : "PWN(128_convolutional_lrelu)", "timeMs" : 0.573694, "averageMs" : 0.0191231, "percentage" : 0.0166106 }
+, { "name" : "Reformatting CopyNode for Input Tensor 0 to 129_upsample", "timeMs" : 0.986929, "averageMs" : 0.0328976, "percentage" : 0.0285753 }
+, { "name" : "129_upsample", "timeMs" : 4.36453, "averageMs" : 0.145484, "percentage" : 0.12637 }
+, { "name" : "131_convolutional + 131_convolutional_bn", "timeMs" : 8.31281, "averageMs" : 0.277094, "percentage" : 0.240687 }
+, { "name" : "PWN(131_convolutional_lrelu)", "timeMs" : 1.82271, "averageMs" : 0.060757, "percentage" : 0.0527743 }
+, { "name" : "129_upsample copy", "timeMs" : 4.21937, "averageMs" : 0.140646, "percentage" : 0.122167 }
+, { "name" : "133_convolutional + 133_convolutional_bn", "timeMs" : 8.26068, "averageMs" : 0.275356, "percentage" : 0.239178 }
+, { "name" : "PWN(133_convolutional_lrelu)", "timeMs" : 1.61708, "averageMs" : 0.0539028, "percentage" : 0.0468207 }
+, { "name" : "134_convolutional + 134_convolutional_bn", "timeMs" : 61.111, "averageMs" : 2.03703, "percentage" : 1.76939 }
+, { "name" : "PWN(134_convolutional_lrelu)", "timeMs" : 2.99136, "averageMs" : 0.099712, "percentage" : 0.0866112 }
+, { "name" : "135_convolutional + 135_convolutional_bn", "timeMs" : 8.49755, "averageMs" : 0.283252, "percentage" : 0.246036 }
+, { "name" : "PWN(135_convolutional_lrelu)", "timeMs" : 1.62094, "averageMs" : 0.0540313, "percentage" : 0.0469323 }
+, { "name" : "136_convolutional + 136_convolutional_bn", "timeMs" : 61.832, "averageMs" : 2.06107, "percentage" : 1.79027 }
+, { "name" : "PWN(136_convolutional_lrelu)", "timeMs" : 3.0238, "averageMs" : 0.100793, "percentage" : 0.0875503 }
+, { "name" : "137_convolutional + 137_convolutional_bn", "timeMs" : 8.43365, "averageMs" : 0.281122, "percentage" : 0.244186 }
+, { "name" : "PWN(137_convolutional_lrelu)", "timeMs" : 1.59396, "averageMs" : 0.0531319, "percentage" : 0.0461511 }
+, { "name" : "138_convolutional + 138_convolutional_bn", "timeMs" : 60.7995, "averageMs" : 2.02665, "percentage" : 1.76037 }
+, { "name" : "PWN(138_convolutional_lrelu)", "timeMs" : 2.96094, "averageMs" : 0.098698, "percentage" : 0.0857304 }
+, { "name" : "139_convolutional", "timeMs" : 16.2184, "averageMs" : 0.540615, "percentage" : 0.469585 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to 139_convolutional", "timeMs" : 7.12615, "averageMs" : 0.237538, "percentage" : 0.206329 }
+, { "name" : "142_convolutional + 142_convolutional_bn", "timeMs" : 17.6941, "averageMs" : 0.589804, "percentage" : 0.512311 }
+, { "name" : "PWN(142_convolutional_lrelu)", "timeMs" : 0.981042, "averageMs" : 0.0327014, "percentage" : 0.0284049 }
+, { "name" : "144_convolutional + 144_convolutional_bn", "timeMs" : 8.83193, "averageMs" : 0.294398, "percentage" : 0.255718 }
+, { "name" : "PWN(144_convolutional_lrelu)", "timeMs" : 0.874373, "averageMs" : 0.0291458, "percentage" : 0.0253164 }
+, { "name" : "145_convolutional + 145_convolutional_bn", "timeMs" : 69.4606, "averageMs" : 2.31535, "percentage" : 2.01115 }
+, { "name" : "PWN(145_convolutional_lrelu)", "timeMs" : 1.55849, "averageMs" : 0.0519497, "percentage" : 0.0451242 }
+, { "name" : "146_convolutional + 146_convolutional_bn", "timeMs" : 8.49646, "averageMs" : 0.283215, "percentage" : 0.246005 }
+, { "name" : "PWN(146_convolutional_lrelu)", "timeMs" : 0.878178, "averageMs" : 0.0292726, "percentage" : 0.0254266 }
+, { "name" : "147_convolutional + 147_convolutional_bn", "timeMs" : 69.4159, "averageMs" : 2.31386, "percentage" : 2.00985 }
+, { "name" : "PWN(147_convolutional_lrelu)", "timeMs" : 1.56011, "averageMs" : 0.0520035, "percentage" : 0.0451709 }
+, { "name" : "148_convolutional + 148_convolutional_bn", "timeMs" : 8.51422, "averageMs" : 0.283807, "percentage" : 0.246519 }
+, { "name" : "PWN(148_convolutional_lrelu)", "timeMs" : 0.869898, "averageMs" : 0.0289966, "percentage" : 0.0251868 }
+, { "name" : "149_convolutional + 149_convolutional_bn", "timeMs" : 69.6284, "averageMs" : 2.32095, "percentage" : 2.01601 }
+, { "name" : "PWN(149_convolutional_lrelu)", "timeMs" : 1.56844, "averageMs" : 0.0522813, "percentage" : 0.0454123 }
+, { "name" : "150_convolutional", "timeMs" : 8.52521, "averageMs" : 0.284174, "percentage" : 0.246837 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to 150_convolutional", "timeMs" : 1.89046, "averageMs" : 0.0630155, "percentage" : 0.0547361 }
+, { "name" : "153_convolutional + 153_convolutional_bn", "timeMs" : 23.0569, "averageMs" : 0.768562, "percentage" : 0.667584 }
+, { "name" : "PWN(153_convolutional_lrelu)", "timeMs" : 0.733126, "averageMs" : 0.0244375, "percentage" : 0.0212268 }
+, { "name" : "155_convolutional + 155_convolutional_bn", "timeMs" : 10.6306, "averageMs" : 0.354354, "percentage" : 0.307797 }
+, { "name" : "PWN(155_convolutional_lrelu)", "timeMs" : 0.654325, "averageMs" : 0.0218108, "percentage" : 0.0189452 }
+, { "name" : "156_convolutional + 156_convolutional_bn", "timeMs" : 90.2584, "averageMs" : 3.00861, "percentage" : 2.61332 }
+, { "name" : "PWN(156_convolutional_lrelu)", "timeMs" : 0.858751, "averageMs" : 0.028625, "percentage" : 0.0248641 }
+, { "name" : "157_convolutional + 157_convolutional_bn", "timeMs" : 10.5796, "averageMs" : 0.352653, "percentage" : 0.306319 }
+, { "name" : "PWN(157_convolutional_lrelu)", "timeMs" : 0.654584, "averageMs" : 0.0218195, "percentage" : 0.0189527 }
+, { "name" : "158_convolutional + 158_convolutional_bn", "timeMs" : 90.2013, "averageMs" : 3.00671, "percentage" : 2.61167 }
+, { "name" : "PWN(158_convolutional_lrelu)", "timeMs" : 0.857552, "averageMs" : 0.0285851, "percentage" : 0.0248294 }
+, { "name" : "159_convolutional + 159_convolutional_bn", "timeMs" : 10.5832, "averageMs" : 0.352773, "percentage" : 0.306423 }
+, { "name" : "PWN(159_convolutional_lrelu)", "timeMs" : 0.653853, "averageMs" : 0.0217951, "percentage" : 0.0189315 }
+, { "name" : "160_convolutional + 160_convolutional_bn", "timeMs" : 90.7736, "averageMs" : 3.02579, "percentage" : 2.62824 }
+, { "name" : "PWN(160_convolutional_lrelu)", "timeMs" : 0.860677, "averageMs" : 0.0286892, "percentage" : 0.0249199 }
+, { "name" : "161_convolutional", "timeMs" : 5.4776, "averageMs" : 0.182587, "percentage" : 0.158597 }
+, { "name" : "Reformatting CopyNode for Output Tensor 0 to 161_convolutional", "timeMs" : 0.544639, "averageMs" : 0.0181546, "percentage" : 0.0157694 }
+]
