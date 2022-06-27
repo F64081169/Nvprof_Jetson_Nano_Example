@@ -1,5 +1,4 @@
 """yolo_with_plugins.py
-
 Implementation of TrtYOLO class with the yolo_layer plugins.
 """
 
@@ -12,14 +11,10 @@ import numpy as np
 import cv2
 import tensorrt as trt
 import pycuda.driver as cuda
-
-import multiprocessing as mp
-import time
+from multiprocessing import Pool
+from functools import partial 
+from itertools import repeat
 import os
-nms_threshold = 0.5
-detections = []
-clss = []
-
 try:
     ctypes.cdll.LoadLibrary('./plugins/libyolo_layer.so')
 except OSError as e:
@@ -30,13 +25,11 @@ except OSError as e:
 
 def _preprocess_yolo(img, input_shape, letter_box=False):
     """Preprocess an image before TRT YOLO inferencing.
-
     # Args
         img: int8 numpy array of shape (img_h, img_w, 3)
         input_shape: a tuple of (H, W)
         letter_box: boolean, specifies whether to keep aspect ratio and
                     create a "letterboxed" image for inference
-
     # Returns
         preprocessed img: float32 numpy array of shape (3, H, W)
     """
@@ -66,7 +59,6 @@ def _nms_boxes(detections, nms_threshold):
     """Apply the Non-Maximum Suppression (NMS) algorithm on the bounding
     boxes with their confidence scores and return an array with the
     indexes of the bounding boxes we want to keep.
-
     # Args
         detections: Nx7 numpy arrays of
                     [[x, y, w, h, box_confidence, class_id, class_prob],
@@ -106,14 +98,12 @@ def _nms_boxes(detections, nms_threshold):
 def _postprocess_yolo(trt_outputs, img_w, img_h, conf_th, nms_threshold,
                       input_shape, letter_box=False):
     """Postprocess TensorRT outputs.
-
     # Args
         trt_outputs: a list of 2 or 3 tensors, where each tensor
                     contains a multiple of 7 float32 numbers in
                     the order of [x, y, w, h, box_confidence, class_id, class_prob]
         conf_th: confidence threshold
         letter_box: boolean, referring to _preprocess_yolo()
-
     # Returns
         boxes, scores, classes (after NMS)
     """
@@ -145,58 +135,50 @@ def _postprocess_yolo(trt_outputs, img_w, img_h, conf_th, nms_threshold,
         detections[:, 0:4] *= np.array(
             [old_w, old_h, old_w, old_h], dtype=np.float32)
 
+        # NMS
         nms_detections = np.zeros((0, 7), dtype=detections.dtype)
+        # for class_id in set(detections[:, 5]):
+        #     idxs = np.where(detections[:, 5] == class_id)
+        #     cls_detections = detections[idxs]
+        #     keep = _nms_boxes(cls_detections, nms_threshold)
+        #     nms_detections = np.concatenate(
+        #         [nms_detections, cls_detections[keep]], axis=0)
+
         
-        # boxes, scores, classes = _multiprocess_NMS(offset_w,offset_h,letter_box,detections,nms_threshold,nms_detections)
-        boxes, scores, classes = _NMS(offset_w,offset_h,letter_box,detections,nms_threshold,nms_detections)
-    
-    return  boxes, scores, classes
+        with Pool() as pool:
+             # nms_detections = pool.map(partial(_multiprocess_NMS, detections=detections,nms_threshold = nms_threshold), set(detections[:, 5]))
+            nms_detections = pool.starmap(_multiprocess_NMS, zip(repeat(nms_detections),repeat(detections),repeat(0.5),set(detections[:,5])))
 
-def _multiprocessing_NMS(nms_detections,detections,class_id):
-    # print(" process PID", os.getpid(), " running")
+        nms_detections = np.array(nms_detections)
+        # print(nms_detections)    
+        # print(type(nms_detections))
+        # print(nms_detections[:,:,0].reshape(-1, 1))  
 
+        xx = nms_detections[:,:,0].reshape(-1, 1)
+        yy = nms_detections[:,:,1].reshape(-1, 1)
+      
+        if letter_box:
+            xx = xx - offset_w
+            yy = yy - offset_h
+        ww = nms_detections[:,:,2].reshape(-1, 1)
+        hh = nms_detections[:,:,3].reshape(-1, 1)
+       
+        boxes = np.concatenate([xx, yy, xx+ww, yy+hh], axis=1) + 0.5
+        boxes = boxes.astype(np.int)
+        scores = nms_detections[:,:,4] * nms_detections[:,:,6]
+        classes = nms_detections[:,:,5]
+       
+    return boxes, scores, classes
+
+def _multiprocess_NMS(nms_detections, detections,  nms_threshold, class_id):
+    print('process running at PID = ',os.getpid())
     idxs = np.where(detections[:, 5] == class_id)
     cls_detections = detections[idxs]
     keep = _nms_boxes(cls_detections, nms_threshold)
     nms_detections = np.concatenate(
         [nms_detections, cls_detections[keep]], axis=0)
-    return class_id, idxs, cls_detections, keep, nms_detections
-    
 
-def _NMS(offset_w,offset_h,letter_box,detections,nms_threshold,nms_detections):
-        # for multi-processing : 4 cores
-        # for class_id in set(detections[:, 5]):
-        process_list = []
-        for i in detections[:,5]:
-            clss.append(i)
-        # print(clss)
-        i = 0
-        for class_id in detections[:,5]:
-            process_list.append(mp.Process(target=_multiprocessing_NMS, args=(nms_detections,detections,class_id)))
-            process_list[i].start()
-            i = i+1 
-        
-        for j in range(len(detections[:,5])):
-            process_list[j].join()
-
-        idxs = np.where(detections[:, 5] == class_id)
-        cls_detections = detections[idxs]
-        keep = _nms_boxes(cls_detections, nms_threshold)
-        nms_detections = np.concatenate(
-            [nms_detections, cls_detections[keep]], axis=0)
-        xx = nms_detections[:, 0].reshape(-1, 1)
-        yy = nms_detections[:, 1].reshape(-1, 1)
-        if letter_box:
-            xx = xx - offset_w
-            yy = yy - offset_h
-        ww = nms_detections[:, 2].reshape(-1, 1)
-        hh = nms_detections[:, 3].reshape(-1, 1)
-        boxes = np.concatenate([xx, yy, xx+ww, yy+hh], axis=1) + 0.5
-        boxes = boxes.astype(np.int)
-        scores = nms_detections[:, 4] * nms_detections[:, 6]
-        classes = nms_detections[:, 5]
-        return boxes, scores, classes
-
+    return nms_detections
 
 class HostDeviceMem(object):
     """Simple helper data class that's a little nicer to use than a 2-tuple."""
@@ -267,7 +249,6 @@ def allocate_buffers(engine):
 
 def do_inference(context, bindings, inputs, outputs, stream, batch_size=1):
     """do_inference (for TensorRT 6.x or lower)
-
     This function is generalized for multiple inputs/outputs.
     Inputs and outputs are expected to be lists of HostDeviceMem objects.
     """
@@ -287,7 +268,6 @@ def do_inference(context, bindings, inputs, outputs, stream, batch_size=1):
 
 def do_inference_v2(context, bindings, inputs, outputs, stream):
     """do_inference_v2 (for TensorRT 7.0+)
-
     This function is generalized for multiple inputs/outputs for full
     dimension networks.
     Inputs and outputs are expected to be lists of HostDeviceMem objects.
