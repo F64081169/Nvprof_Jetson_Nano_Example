@@ -137,41 +137,28 @@ def _postprocess_yolo(trt_outputs, img_w, img_h, conf_th, nms_threshold,
 
         # NMS
         nms_detections = np.zeros((0, 7), dtype=detections.dtype)
-        # for class_id in set(detections[:, 5]):
-        #     idxs = np.where(detections[:, 5] == class_id)
-        #     cls_detections = detections[idxs]
-        #     keep = _nms_boxes(cls_detections, nms_threshold)
-        #     nms_detections = np.concatenate(
-        #         [nms_detections, cls_detections[keep]], axis=0)
-
-        
         with Pool() as pool:
-             # nms_detections = pool.map(partial(_multiprocess_NMS, detections=detections,nms_threshold = nms_threshold), set(detections[:, 5]))
             nms_detections = pool.starmap(_multiprocess_NMS, zip(repeat(nms_detections),repeat(detections),repeat(0.5),set(detections[:,5])))
 
-        nms_detections = np.array(nms_detections)
-        # print(nms_detections)    
-        # print(type(nms_detections))
-        # print(nms_detections[:,:,0].reshape(-1, 1))  
+        nms_detections = np.reshape(nms_detections,(-1,7)) 
 
-        xx = nms_detections[:,:,0].reshape(-1, 1)
-        yy = nms_detections[:,:,1].reshape(-1, 1)
+        xx = nms_detections[:,0].reshape(-1, 1)
+        yy = nms_detections[:,1].reshape(-1, 1)
       
         if letter_box:
             xx = xx - offset_w
             yy = yy - offset_h
-        ww = nms_detections[:,:,2].reshape(-1, 1)
-        hh = nms_detections[:,:,3].reshape(-1, 1)
+        ww = nms_detections[:,2].reshape(-1, 1)
+        hh = nms_detections[:,3].reshape(-1, 1)
        
         boxes = np.concatenate([xx, yy, xx+ww, yy+hh], axis=1) + 0.5
         boxes = boxes.astype(np.int)
-        scores = nms_detections[:,:,4] * nms_detections[:,:,6]
-        classes = nms_detections[:,:,5]
+        scores = nms_detections[:,4] * nms_detections[:,6]
+        classes = nms_detections[:,5]
        
     return boxes, scores, classes
 
 def _multiprocess_NMS(nms_detections, detections,  nms_threshold, class_id):
-    print('process running at PID = ',os.getpid())
     idxs = np.where(detections[:, 5] == class_id)
     cls_detections = detections[idxs]
     keep = _nms_boxes(cls_detections, nms_threshold)
