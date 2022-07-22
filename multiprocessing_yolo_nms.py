@@ -137,13 +137,14 @@ def _postprocess_yolo(trt_outputs, img_w, img_h, conf_th, nms_threshold,
 
         # NMS
         nms_detections = np.zeros((0, 7), dtype=detections.dtype)
-        with Pool(os.cpu_count()) as pool:
-            nms_detections = pool.starmap_async(_multiprocess_NMS, zip(repeat(nms_detections),repeat(detections),repeat(0.5),set(detections[:,5])),chunksize=4).wait()
-            
         
+        with Pool() as pool:
+            nms_detection = pool.starmap_async(_multiprocess_NMS, zip(repeat(nms_detections),repeat(detections),repeat(0.5),set(detections[:,5])))
+            for nms_detection in nms_detection.get():
+                nms_detections = np.concatenate(
+                    [nms_detections, nms_detection], axis=0)
+                
         nms_detections = np.reshape(nms_detections,(-1,7)) 
-        
-        print(nms_detections)
 
         xx = nms_detections[:,0].reshape(-1, 1)
         yy = nms_detections[:,1].reshape(-1, 1)
@@ -162,7 +163,6 @@ def _postprocess_yolo(trt_outputs, img_w, img_h, conf_th, nms_threshold,
     return boxes, scores, classes
 
 def _multiprocess_NMS(nms_detections, detections,  nms_threshold, class_id):
-    print("process : "+os.getpid())
     idxs = np.where(detections[:, 5] == class_id)
     cls_detections = detections[idxs]
     keep = _nms_boxes(cls_detections, nms_threshold)
