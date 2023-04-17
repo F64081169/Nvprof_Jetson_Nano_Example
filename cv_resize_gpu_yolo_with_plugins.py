@@ -23,9 +23,7 @@ except OSError as e:
 
 
 def _preprocess_yolo(img, input_shape, letter_box=False):
-    # 檢查是否支援 GPU 加速
     if cv2_cuda.getCudaEnabledDeviceCount() > 0:
-        # 將圖像轉換為 GPU 格式
         img_cuda = cv2.cuda_GpuMat()
         img_cuda.upload(img)
 
@@ -40,19 +38,15 @@ def _preprocess_yolo(img, input_shape, letter_box=False):
                 new_w = int(img_w * new_h / img_h)
                 offset_w = (input_shape[1] - new_w) // 2
 
-            # 在 GPU 上執行縮放操作
             resized_cuda = cv2_cuda.resize(img_cuda, (new_w, new_h))
             resized = np.empty((input_shape[0], input_shape[1], 3), dtype=np.uint8)
-            # 從 GPU 下載結果
             resized_cuda.download(resized)
             img_cuda.release()
 
             img = np.full((input_shape[0], input_shape[1], 3), 127, dtype=np.uint8)
             img[offset_h:(offset_h + new_h), offset_w:(offset_w + new_w), :] = resized
         else:
-            # 在 GPU 上執行縮放操作
             img_cuda = cv2_cuda.resize(img_cuda, (input_shape[1], input_shape[0]))
-            # 從 GPU 下載結果
             img = np.empty((input_shape[0], input_shape[1], 3), dtype=np.uint8)
             img_cuda.download(img)
             img_cuda.release()
@@ -338,15 +332,15 @@ class TrtYOLO(object):
             self.cuda_ctx.push()
         trt_outputs = self.inference_fn(
             context=self.context,
-OBOBOB            bindings=self.bindings,
-OBOBOB            inputs=self.inputs,
+            bindings=self.bindings,
+            inputs=self.inputs,
             outputs=self.outputs,
-OBOBOB            stream=self.stream)
+            stream=self.stream)
         if self.cuda_ctx:
-OBOBOBOBOBOB            self.cuda_ctx.pop()
+            self.cuda_ctx.pop()
 
         boxes, scores, classes = _postprocess_yolo(
-OBOBOB            trt_outputs, img.shape[1], img.shape[0], conf_th,
+            trt_outputs, img.shape[1], img.shape[0], conf_th,
             nms_threshold=0.5, input_shape=self.input_shape,
             letter_box=letter_box)
 
