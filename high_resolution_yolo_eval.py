@@ -23,10 +23,7 @@ from utils.yolo_classes import yolo_cls_to_ssd
 
 HOME = os.environ['HOME']
 # VAL_IMGS_DIR = HOME + '/coco/images/val2017'
-# VAL_ANNOTATIONS = HOME + '/Downloads/dhd_traffic_trainval_annos/dhd_traffic/annotations/dhd_traffic_val.json'
-
-# VAL_IMGS_DIR = HOME + '/Downloads/dhd_traffic_trainval_images/dhd_traffic/images/val'
-# VAL_ANNOTATIONS = HOME + '/Downloads/dhd_traffic_trainval_annos/dhd_traffic/annotations/dhd_traffic_val.json'
+# VAL_ANNOTATIONS = HOME + '/coco/annotations/instances_val2017.json'
 
 VAL_IMGS_DIR = HOME + '/Downloads/dhd_campus_val_images/dhd_campus/images/val'
 VAL_ANNOTATIONS = HOME + '/Downloads/dhd_campus_trainval_annos/dhd_campus/annotations/dhd_campus_val.json'
@@ -122,4 +119,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
