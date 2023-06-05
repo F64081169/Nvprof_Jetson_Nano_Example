@@ -91,13 +91,14 @@ def _nms_boxes(detections, nms_threshold):
         union = (areas[i] + areas[ordered[i + 1:]] - intersection)
         iou = intersection / union
         indexes = np.where(iou <= nms_threshold)[0]
+        indexes = indexes  
         with lock:
             keep.extend(indexes + i + 1)
 
     with ThreadPoolExecutor() as executor:
         executor.map(process_index, range(len(ordered)))
 
-    keep = np.array(keep)
+    keep = np.array(keep).astype(int)
     return keep
 
 def _postprocess_yolo(trt_outputs, img_w, img_h, conf_th, nms_threshold,
